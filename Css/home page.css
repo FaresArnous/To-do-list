@@ -62,3 +62,27 @@
 #start-btn:hover {
   background-color: rgb(249, 107, 12);
 }
+
+#content {
+  width: 40rem;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  background-color: rgb(187, 189, 239);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+#content h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: rgb(242, 125, 47);
+  margin: 0 auto;
+}
+
+#content ul li {
+  list-style: none;
+}
