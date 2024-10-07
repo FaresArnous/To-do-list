@@ -39,15 +39,23 @@
         </nav>
       </div>
     </header>
-
     <main>
+      <form id="task-form">
+        <div id="task-inputs">
+          <input type="text" id="task-name" placeholder="Task Name" required />
+          <textarea
+            id="task-description"
+            placeholder="Task Description"
+            rows="4"></textarea>
+          <input type="date" id="task-due-date" />
+          <button type="submit" id="submit-task-btn">Add Task</button>
+        </div>
+      </form>
       <section id="tasks-section">
         <div id="card-st">
-          <button id="add-task-btn">
-            click here to add your first task
-            <span id="icom" class="material-symbols-outlined">
-              add_circle
-            </span>
+          <button type="button" id="add-task-btn">
+            Click here to add your first task
+            <span id="icom" class="material-symbols-outlined">add_circle</span>
           </button>
         </div>
       </section>

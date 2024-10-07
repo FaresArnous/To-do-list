@@ -57,3 +57,44 @@
   background-color: rgb(202, 197, 180);
   border-color: rgb(191, 124, 9);
 }
+
+#task-form {
+  display: none;
+  background-color: rgb(255, 248, 225);
+  width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#task-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#task-name,
+#task-description,
+#task-due-date {
+  width: 100%;
+  max-width: 25rem;
+  padding: 0.8rem 0.2rem;
+  margin: 0.5rem auto;
+  font-size: 1rem;
+  border: 1px solid rgb(133, 131, 131);
+}
+
+#submit-task-btn {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: rgb(242, 125, 47);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#submit-task-btn:hover {
+  background-color: rgb(249, 107, 12);
+}
