@@ -1,0 +1,59 @@
+#tasks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#card-tasks {
+  background-color: rgb(255, 248, 225);
+  width: 40rem;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgb(255, 213, 79);
+}
+
+#card-st {
+  width: 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 248, 225);
+  border: 2px dashed rgb(255, 160, 0);
+}
+
+#icom {
+  color: rgb(255, 160, 0);
+  font-size: 2rem;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+#add-task-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: rgba(35, 35, 35, 0.405);
+  border-radius: 10px;
+}
+
+#card-st:hover,
+#add-task-btn:hover {
+  cursor: pointer;
+  background-color: rgb(202, 197, 180);
+  border-color: rgb(191, 124, 9);
+}

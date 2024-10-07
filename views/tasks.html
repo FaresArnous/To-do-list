@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/styles/home page.css" />
+    <link rel="stylesheet" href="/styles/tasks.css" />
     <script src="/scripts/responsive.js" defer></script>
   </head>
   <body>
@@ -41,44 +41,17 @@
     </header>
 
     <main>
-      <section>
-        <div id="welcome-sct">
-          <h2>Welcome to TaskMaster web</h2>
-          <p>
-            Easily manage your tasks with a simple, user-friendly interface. You
-            can add new tasks, edit existing ones, or delete completed items.
-            Stay organized and on top of your to-do list!
-          </p>
-
-          <ul>
-            <li>
-              <span class="material-symbols-outlined">
-                playlist_add_check
-              </span>
-              Add new tasks.
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> edit </span> Edit tasks.
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> delete </span> Delete
-              tasks.
-            </li>
-          </ul>
-          <button id="start-btn">Get Started</button>
+      <section id="tasks-section">
+        <div id="card-st">
+          <button id="add-task-btn">
+            click here to add your first task
+            <span id="icom" class="material-symbols-outlined">
+              add_circle
+            </span>
+          </button>
         </div>
       </section>
-
-      <section>
-        <article>
-          <div id="content">
-            <h2>your tasks</h2>
-            <ul id="new-task"></ul>
-          </div>
-        </article>
-      </section>
     </main>
-
     <footer></footer>
   </body>
 </html>
