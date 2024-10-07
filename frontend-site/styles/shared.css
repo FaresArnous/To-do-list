@@ -42,3 +42,64 @@ body {
   border-radius: 10px;
   background-color: rgb(242, 125, 47);
 }
+
+#drawer-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 3rem;
+}
+
+#drawer-btn span {
+  width: 2.5rem;
+  height: 3px;
+  background-color: rgb(253, 253, 252);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  #nav-bar {
+    display: none;
+  }
+
+  #drawer-btn {
+    display: flex;
+  }
+
+  #nav-bar.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 33, 145, 0.879);
+    z-index: 1000;
+    padding-top: 8rem;
+  }
+
+  #nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav-bar ul li {
+    margin: 1rem 0;
+  }
+
+  #nav-bar ul li a {
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+  }
+}
