@@ -1,9 +1,17 @@
-// const express = require("express");
+const express = require("express");
+const path = require("path");
 
-// const app = express();
+const app = express();
 
-// app.get("/", function (req, res) {
-//   res.send("fates");
-// });
+app.use(express.static("public"));
 
-// app.listen(9090);
+app.get("/", function (req, res) {
+  const htmlFilePath = path.join(__dirname, "views", "home.html");
+  res.sendFile(htmlFilePath);
+});
+app.get("/about", function (req, res) {
+  const htmlFilePath = path.join(__dirname, "views", "about.html");
+  res.sendFile(htmlFilePath);
+});
+
+app.listen(9090);
