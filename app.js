@@ -4,21 +4,25 @@ const fs = require("fs");
 
 const app = express();
 
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
 app.use(express.static("public")); //serving static files
 
 app.use(express.urlencoded({ extended: false })); //middleware to exratc incoming data
 
 app.get("/", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "home.html");
-  res.sendFile(htmlFilePath);
+  res.render("home");
 });
 app.get("/about", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "about.html");
-  res.sendFile(htmlFilePath);
+  res.render("about");
 });
 app.get("/tasks", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "tasks.html");
-  res.sendFile(htmlFilePath);
+  const filePath = path.join(__dirname, "data", "task.json");
+  const fileData = fs.readFileSync(filePath);
+  const storedTasks = JSON.parse(fileData);
+
+  res.render("tasks", { numberOfTasks: storedTasks.length });
 });
 app.post("/tasks", function (req, res) {
   const task = req.body;
@@ -31,8 +35,7 @@ app.post("/tasks", function (req, res) {
 });
 
 app.get("/confirm", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "confirm.html");
-  res.sendFile(htmlFilePath);
+  res.render("confirm");
 });
 
 app.listen(9090);

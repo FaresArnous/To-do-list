@@ -53,6 +53,11 @@
       </div>
     </header>
     <main>
+      <p id="numOfTasks">
+        you have
+        <span style="color: rgb(255, 153, 0)"><%= numberOfTasks %></span> tasks
+        to do!
+      </p>
       <form id="task-form" action="/tasks" method="POST">
         <div id="task-inputs">
           <input
