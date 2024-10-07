@@ -1,75 +1,80 @@
 #welcome-sct {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  width: 40rem;
-  margin: 1.5rem auto;
-  padding: 2rem;
-  background-color: rgb(187, 189, 239);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 45rem;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 #welcome-sct h2 {
-  font-size: 2.3rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 800;
   color: rgb(242, 125, 47);
+  margin-bottom: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 #welcome-sct p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: rgb(35, 35, 35);
-  margin: 1rem 0;
-  padding: 1.5rem;
-  background-color: rgb(250, 250, 250);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgb(75, 75, 75);
+  padding: 1.8rem;
+  background-color: rgb(240, 240, 240);
   border-left: 5px solid rgb(242, 125, 47);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-family: "Nunito", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #welcome-sct ul {
   padding: 0;
-  margin: 0;
+  margin: 1.5rem 0 0 0;
+  width: 100%;
 }
 
 #welcome-sct ul li {
   list-style: none;
-  padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  margin: 0.5rem 0;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(250, 250, 250, 0.9);
+  border-radius: 10px;
+  margin: 0.8rem 0;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #welcome-sct ul li:hover {
   background-color: rgb(242, 125, 47);
   color: white;
-  cursor: pointer;
 }
 
 #start-btn {
-  margin: 1rem 0;
-  padding: 0.3rem;
-  border-radius: 7px;
-  outline: 0;
-  border: 0;
+  margin: 1.8rem 0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
   color: white;
   background-color: rgb(242, 125, 47);
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 #start-btn:hover {
   background-color: rgb(249, 107, 12);
 }
 
 #content {
-  width: 40rem;
-  margin: 1.5rem auto;
-  padding: 2rem;
-  background-color: rgb(187, 189, 239);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 45rem;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -77,12 +82,13 @@
 }
 
 #content h2 {
-  font-size: 2.3rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 800;
   color: rgb(242, 125, 47);
-  margin: 0 auto;
+  margin-bottom: 1.8rem;
 }
 
 #content ul li {
   list-style: none;
+  padding: 0.8rem 1.5rem;
 }
