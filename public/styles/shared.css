@@ -27,15 +27,22 @@ body {
 }
 
 #nav-bar ul li {
+  display: flex;
+  align-items: center;
   margin-left: 0.5rem;
 }
 
 #nav-bar ul li a {
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 600;
   color: rgb(253, 253, 252);
   text-decoration: none;
   padding: 0.3rem 1rem;
+}
+#nav-bar ul li span {
+  margin-right: 0.5rem;
 }
 
 #nav-bar ul li a:hover {
