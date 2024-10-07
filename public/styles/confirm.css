@@ -1,0 +1,21 @@
+#confirmation-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  text-align: center;
+  width: 30rem;
+  margin: 8rem auto;
+}
+
+#confirmation-card h1 {
+  font-size: 2rem;
+  color: rgb(34, 153, 84);
+  margin-bottom: 1.5rem;
+}
+
+#confirmation-card p {
+  font-size: 1.2rem;
+  color: rgb(75, 75, 75);
+  margin-bottom: 2rem;
+}

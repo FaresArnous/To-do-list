@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/styles/tasks.css" />
+    <link rel="stylesheet" href="/styles/confirm.css" />
     <script src="/scripts/responsive.js" defer></script>
   </head>
   <body>
@@ -40,32 +40,10 @@
       </div>
     </header>
     <main>
-      <form id="task-form" action="/tasks" method="POST">
-        <div id="task-inputs">
-          <input
-            type="text"
-            id="task-name"
-            name="name"
-            placeholder="Task Name"
-            required />
-          <textarea
-            name="description"
-            id="task-description"
-            placeholder="Task Description"
-            rows="4"></textarea>
-          <input type="date" name="due-date" id="task-due-date" />
-          <button type="submit" id="submit-task-btn">Add Task</button>
-        </div>
-      </form>
-      <section id="tasks-section">
-        <div id="card-st">
-          <button type="button" id="add-task-btn">
-            Click here to add your first task
-            <span id="icom" class="material-symbols-outlined">add_circle</span>
-          </button>
-        </div>
-      </section>
+      <div id="confirmation-card">
+        <h1>Task Added Successfully!</h1>
+        <p>Your task has been added to the list.</p>
+      </div>
     </main>
-    <footer></footer>
   </body>
 </html>

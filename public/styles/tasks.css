@@ -59,7 +59,7 @@
 }
 
 #task-form {
-  display: none;
+  /* display: none; */
   background-color: rgb(255, 248, 225);
   width: 30rem;
   margin: 2rem auto;

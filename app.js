@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 
 const app = express();
 
@@ -19,8 +20,19 @@ app.get("/tasks", function (req, res) {
   const htmlFilePath = path.join(__dirname, "views", "tasks.html");
   res.sendFile(htmlFilePath);
 });
-app.post("/tasks", function (res, req) {
-  req.body;
+app.post("/tasks", function (req, res) {
+  const task = req.body;
+  const filePath = path.join(__dirname, "data", "task.json");
+  const fileData = fs.readFileSync(filePath);
+  const storedTasks = JSON.parse(fileData);
+  storedTasks.push(task);
+  fs.writeFileSync(filePath, JSON.stringify(storedTasks));
+  res.redirect("/confirm");
+});
+
+app.get("/confirm", function (req, res) {
+  const htmlFilePath = path.join(__dirname, "views", "confirm.html");
+  res.sendFile(htmlFilePath);
 });
 
 app.listen(9090);
