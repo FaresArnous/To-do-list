@@ -1,1 +1,18 @@
-[{"name":"read a book","description":"ffefefe","dueDate":"0515-05-15"},{"name":"55","description":"aax","dueDate":""},{"name":"xaxa","description":"xaxa","dueDate":"0051-05-05"}]
+[
+  {
+    "name": "create a new broject",
+    "description": "I want to practice what I have learned form my Udemy course, by creating an online shop website ",
+    "dueDate": "2024-12-29"
+  },
+  {
+    "name": "finish my Udemy course ",
+    "description": "I want to finish my Udemy course and start another one to improve my coding skills ",
+    "dueDate": "2024-12-15"
+  },
+
+  {
+    "name": "read a book",
+    "description": "I want to read the new book that I bought",
+    "dueDate": "2024-11-29"
+  }
+]

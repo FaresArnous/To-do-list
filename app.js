@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false })); //middleware to exratc incomin
 app.get("/", function (req, res) {
   res.render("home");
 });
+
 app.get("/about", function (req, res) {
   res.render("about");
 });
