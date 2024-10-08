@@ -66,7 +66,7 @@
 }
 
 #task-form {
-  display: none;
+  /* display: none; */
   background-color: rgb(255, 248, 225);
   width: 30rem;
   margin: 2rem auto;
@@ -104,4 +104,53 @@
 
 #submit-task-btn:hover {
   background-color: rgb(249, 107, 12);
+}
+#content {
+  width: 45rem;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* display: none; */
+}
+
+#content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: rgb(242, 125, 47);
+  margin-bottom: 1.8rem;
+}
+
+#listOfTask li {
+  list-style: none;
+  padding: 0.8rem 1.5rem;
+  background-color: rgb(160, 159, 154);
+  width: 30rem;
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#listOfTask li {
+  background-color: rgb(206, 204, 196);
+  width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 6px solid rgb(249, 107, 12);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-details {
+  color: rgb(97, 95, 95);
+  background-color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0.2rem auto 0.2rem -1rem;
 }

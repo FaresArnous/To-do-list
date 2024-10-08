@@ -5,11 +5,11 @@ const fs = require("fs");
 const app = express();
 
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //to use ejs templet
 
 app.use(express.static("public")); //serving static files
 
-app.use(express.urlencoded({ extended: false })); //middleware to exratc incoming data
+app.use(express.urlencoded({ extended: false })); //middleware to exratc incoming data form the files
 
 app.get("/", function (req, res) {
   res.render("home");
@@ -22,7 +22,10 @@ app.get("/tasks", function (req, res) {
   const fileData = fs.readFileSync(filePath);
   const storedTasks = JSON.parse(fileData);
 
-  res.render("tasks", { numberOfTasks: storedTasks.length });
+  res.render("tasks", {
+    numberOfTasks: storedTasks.length,
+    tasks: storedTasks,
+  });
 });
 app.post("/tasks", function (req, res) {
   const task = req.body;
