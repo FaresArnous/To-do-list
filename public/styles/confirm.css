@@ -19,3 +19,23 @@
   color: rgb(75, 75, 75);
   margin-bottom: 2rem;
 }
+
+#returen-btn {
+  margin: 1.8rem 0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(242, 125, 47);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#returen-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+#returen-btn:hover {
+  background-color: rgb(249, 107, 12);
+}

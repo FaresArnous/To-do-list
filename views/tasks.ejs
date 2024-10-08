@@ -58,6 +58,8 @@
         <span style="color: rgb(255, 153, 0)"><%= numberOfTasks %></span> tasks
         to do!
       </p>
+
+      <% if( tasks.length >0 ){ %>
       <form id="task-form" action="/tasks" method="POST">
         <div id="task-inputs">
           <input
@@ -75,14 +77,6 @@
           <button type="submit" id="submit-task-btn">Add Task</button>
         </div>
       </form>
-      <section id="tasks-section">
-        <div id="card-st">
-          <button type="button" id="add-task-btn">
-            Click here to add your first task
-            <span id="icom" class="material-symbols-outlined">add_circle</span>
-          </button>
-        </div>
-      </section>
       <section>
         <div id="content">
           <h2>your tasks</h2>
@@ -99,6 +93,16 @@
           </ul>
         </div>
       </section>
+      <% } else{ %>
+      <section id="tasks-section">
+        <div id="card-st">
+          <button type="button" id="add-task-btn">
+            Click here to add your first task
+            <span id="icom" class="material-symbols-outlined">add_circle</span>
+          </button>
+        </div>
+      </section>
+      <% } %>
     </main>
     <footer></footer>
   </body>
