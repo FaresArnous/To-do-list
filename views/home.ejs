@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/styles/home page.css" />
-    <script src="/scripts/responsive.js" defer></script>
-  </head>
+  <%-include("../includes/head") %>
   <body>
     <%-include("../includes/header") %>
     <main>
@@ -28,21 +13,6 @@
             Stay organized and on top of your to-do list!
           </p>
 
-          <ul>
-            <li id="addNewTask">
-              <span class="material-symbols-outlined">
-                playlist_add_check
-              </span>
-              Add new tasks.
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> edit </span> Edit tasks.
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> delete </span> Delete
-              tasks.
-            </li>
-          </ul>
           <button id="start-btn"><a href="/tasks">Get Started</a></button>
         </div>
       </section>

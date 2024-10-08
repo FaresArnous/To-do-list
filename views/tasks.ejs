@@ -1,31 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasks</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/styles/tasks.css" />
-    <script src="/scripts/responsive.js" defer></script>
-  </head>
+  <%-include("../includes/head") %>
+  <link rel="stylesheet" href="/styles/tasks.css" />
   <body>
     <%-include("../includes/header") %>
     <main>
-      <p id="numOfTasks">
-        you have
-        <span style="color: rgb(255, 153, 0)"><%= numberOfTasks %></span> tasks
-        to do!
-      </p>
-
-      <% if( tasks.length >0 ){ %>
       <form id="task-form" action="/tasks" method="POST">
         <div id="task-inputs">
           <input
@@ -43,6 +22,12 @@
           <button type="submit" id="submit-task-btn">Add Task</button>
         </div>
       </form>
+
+      <p id="numOfTasks">
+        you have
+        <span style="color: rgb(255, 153, 0)"><%= numberOfTasks %></span> tasks
+        to do!
+      </p>
       <section>
         <div id="content">
           <h2>your tasks</h2>
@@ -59,16 +44,6 @@
           </ul>
         </div>
       </section>
-      <% } else{ %>
-      <section id="tasks-section">
-        <div id="card-st">
-          <button type="button" id="add-task-btn">
-            Click here to add your first task
-            <span id="icom" class="material-symbols-outlined">add_circle</span>
-          </button>
-        </div>
-      </section>
-      <% } %>
     </main>
     <footer></footer>
   </body>
