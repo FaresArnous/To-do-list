@@ -17,42 +17,7 @@
     <script src="/scripts/responsive.js" defer></script>
   </head>
   <body>
-    <header id="main-header">
-      <div class="header-content">
-        <a href="/">
-          <img
-            id="page-logo"
-            src="/images/my page logo.png"
-            alt="My Page Logo" />
-        </a>
-        <aside id="drawer-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </aside>
-        <nav id="nav-bar" aria-label="Main Navigation">
-          <ul>
-            <li>
-              <a href="/"
-                ><span class="material-symbols-outlined"> home </span> Home</a
-              >
-            </li>
-            <li>
-              <a href="/tasks">
-                <span class="material-symbols-outlined"> list_alt </span
-                >Tasks</a
-              >
-            </li>
-            <li>
-              <a href="/about">
-                <span class="material-symbols-outlined"> info </span>About</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    <%-include("../includes/header") %>
     <main>
       <section>
         <div id="welcome-sct">
