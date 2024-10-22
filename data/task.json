@@ -1,18 +1,1 @@
-[
-  {
-    "name": "create a new broject",
-    "description": "I want to practice what I have learned form my Udemy course, by creating an online shop website ",
-    "dueDate": "2024-12-29"
-  },
-  {
-    "name": "finish my Udemy course ",
-    "description": "I want to finish my Udemy course and start another one to improve my coding skills ",
-    "dueDate": "2024-12-15"
-  },
-
-  {
-    "name": "read a book",
-    "description": "I want to read the new book that I bought",
-    "dueDate": "2024-11-29"
-  }
-]
+[{"name":"read a book","description":"fares Arnoud","dueDate":"2025-10-02"}]

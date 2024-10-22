@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+const fs = require("fs");
 
 const router = express.Router();
 
@@ -9,8 +11,9 @@ router.get("/", function (req, res) {
 router.get("/about", function (req, res) {
   res.render("about");
 });
+
 router.get("/tasks", function (req, res) {
-  const filePath = path.join(__dirname, "data", "task.json");
+  const filePath = path.join(__dirname, "..", "data", "task.json");
   const fileData = fs.readFileSync(filePath);
   const storedTasks = JSON.parse(fileData);
 
@@ -19,9 +22,10 @@ router.get("/tasks", function (req, res) {
     tasks: storedTasks,
   });
 });
+
 router.post("/tasks", function (req, res) {
   const task = req.body;
-  const filePath = path.join(__dirname, "data", "task.json");
+  const filePath = path.join(__dirname, "..", "data", "task.json");
   const fileData = fs.readFileSync(filePath);
   const storedTasks = JSON.parse(fileData);
   storedTasks.push(task);
