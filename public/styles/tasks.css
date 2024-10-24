@@ -158,6 +158,8 @@
 #btns {
   margin: 0 0.3rem;
   padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 #delete,

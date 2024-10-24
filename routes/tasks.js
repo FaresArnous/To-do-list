@@ -50,4 +50,10 @@ router.get("/confirm", function (req, res) {
   res.render("confirm");
 });
 
+router.post("/tasks/:id/delete", async function (req, res) {
+  const taskId = req.params.id;
+  await db.query("DELETE FROM tasks.task WHERE id = ?", [taskId]);
+  res.redirect("/tasks");
+});
+
 module.exports = router;

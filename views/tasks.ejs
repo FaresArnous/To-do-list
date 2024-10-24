@@ -44,7 +44,12 @@
               </article>
               <div id="btns">
                 <button id="edit">Edit</button>
-                <button id="delete">Delete Task</button>
+                <form
+                  action="/tasks/<%= task.id %>/delete"
+                  method="POST"
+                  onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" id="delete">Delete Task</button>
+                </form>
               </div>
             </li>
             <% } %>
