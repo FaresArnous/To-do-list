@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
+const db = require("../data/database");
+
 const router = express.Router();
 
 router.get("/", function (req, res) {
@@ -12,24 +14,12 @@ router.get("/about", function (req, res) {
   res.render("about");
 });
 
-router.get("/tasks", function (req, res) {
-  const filePath = path.join(__dirname, "..", "data", "task.json");
-  const fileData = fs.readFileSync(filePath);
-  const storedTasks = JSON.parse(fileData);
-
-  res.render("tasks", {
-    numberOfTasks: storedTasks.length,
-    tasks: storedTasks,
-  });
+router.get("/tasks", async function (req, res) {
+  const [tasks] = await db.query("SELECT * FROM tasks.task");
+  res.render("tasks", { tasks: tasks });
 });
 
 router.post("/tasks", function (req, res) {
-  const task = req.body;
-  const filePath = path.join(__dirname, "..", "data", "task.json");
-  const fileData = fs.readFileSync(filePath);
-  const storedTasks = JSON.parse(fileData);
-  storedTasks.push(task);
-  fs.writeFileSync(filePath, JSON.stringify(storedTasks));
   res.redirect("/confirm");
 });
 
