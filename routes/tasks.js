@@ -22,10 +22,8 @@ router.get("/tasks", async function (req, res) {
 
   const [tasks] = await db.query("SELECT * FROM tasks.task");
 
-  res.render("tasks", { tasks: tasks, numberOfTasks: numberOfTasks });
-
   const formattedTasks = tasks.map((task) => {
-    task.dueDate = new Date(task.date).toLocaleDateString("en-US", {
+    task.date = new Date(task.date).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -33,14 +31,14 @@ router.get("/tasks", async function (req, res) {
     return task;
   });
 
-  res.render("tasks", { tasks: formattedTasks });
+  res.render("tasks", { tasks: formattedTasks, numberOfTasks: numberOfTasks });
 });
 
 router.post("/tasks", async function (req, res) {
-  const { name, description, dueDate } = req.body;
+  const { name, description, date } = req.body;
   await db.query(
     "INSERT INTO tasks.task (title, content, date) VALUES (?, ?, ?)",
-    [name, description, dueDate]
+    [name, description, date]
   );
 
   res.redirect("/confirm");

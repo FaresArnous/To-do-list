@@ -38,12 +38,11 @@
                 <p class="task-details"><%= task.title%></p>
                 <p class="task-details"><%= task.content %></p>
                 <p class="task-details">
-                  Due Date: <%= new Date(task.date).toLocaleDateString("en-US",
-                  { year: 'numeric', month: 'long', day: 'numeric' }) %>
+                  <%= new Date(task.date).toLocaleDateString("en-US", { year:
+                  'numeric', month: 'long', day: 'numeric' }) %>
                 </p>
               </article>
               <div id="btns">
-                <button id="edit">Edit</button>
                 <form
                   action="/tasks/<%= task.id %>/delete"
                   method="POST"
