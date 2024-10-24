@@ -35,10 +35,17 @@
             <% for(const task of tasks){ %>
             <li id="task-item">
               <article>
-                <p class="task-details"><%= task.name%></p>
-                <p class="task-details"><%= task.description %></p>
-                <p class="task-details"><%= task.dueDate %></p>
+                <p class="task-details"><%= task.title%></p>
+                <p class="task-details"><%= task.content %></p>
+                <p class="task-details">
+                  Due Date: <%= new Date(task.date).toLocaleDateString("en-US",
+                  { year: 'numeric', month: 'long', day: 'numeric' }) %>
+                </p>
               </article>
+              <div id="btns">
+                <button id="edit">Edit</button>
+                <button id="delete">Delete Task</button>
+              </div>
             </li>
             <% } %>
           </ul>

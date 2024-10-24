@@ -154,3 +154,24 @@
   border-radius: 10px;
   margin: 0.2rem auto 0.2rem -1rem;
 }
+
+#btns {
+  margin: 0 0.3rem;
+  padding: 0.5rem;
+}
+
+#delete,
+#edit {
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: rgb(242, 125, 47);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#delete:hover,
+#edit:hover {
+  background-color: rgb(253, 101, 0);
+}
