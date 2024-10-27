@@ -43,6 +43,9 @@
                 </p>
               </article>
               <div id="btns">
+                <a href="/task/<%= task.id %>/edit">
+                  <button id="edit">Edit Task</button>
+                </a>
                 <form
                   action="/tasks/<%= task.id %>/delete"
                   method="POST"

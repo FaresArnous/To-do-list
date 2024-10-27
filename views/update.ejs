@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head") %>
+  <link rel="stylesheet" href="/styles/tasks.css" />
+  <link rel="stylesheet" href="/styles/shared.css" />
+  <body>
+    <%- include("../includes/header") %>
+    <main>
+      <section>
+        <div id="content">
+          <h2>Edit Task</h2>
+          <form id="task-form" action="/task/<%= task.id %>/edit" method="POST">
+            <div id="task-inputs">
+              <input
+                type="text"
+                id="task-name"
+                name="name"
+                value="<%= task.title %>"
+                required />
+              <textarea
+                id="task-description"
+                name="description"
+                required
+                rows="4">
+        <%= task.content %> </textarea
+              >
+              <input
+                type="date"
+                name="date"
+                id="task-due-date"
+                value="<%= task.date %>"
+                required />
+              <button id="submit-task-btn" type="submit">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
