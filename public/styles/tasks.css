@@ -178,3 +178,18 @@
 #edit:hover {
   background-color: rgb(253, 101, 0);
 }
+
+@media (max-width: 600px) {
+  #task-form,
+  #content {
+    width: 90%;
+  }
+
+  #listOfTask li {
+    width: 100%;
+  }
+
+  #content h2 {
+    font-size: 2rem;
+  }
+}

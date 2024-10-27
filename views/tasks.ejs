@@ -18,7 +18,8 @@
             id="task-description"
             placeholder="Task Description"
             rows="4"></textarea>
-          <input type="date" name="dueDate" id="task-due-date" />
+          <input type="date" name="date" id="task-due-date" required />
+          <!-- Changed to name="date" -->
           <button type="submit" id="submit-task-btn">Add Task</button>
         </div>
       </form>
@@ -35,7 +36,7 @@
             <% for(const task of tasks){ %>
             <li id="task-item">
               <article>
-                <p class="task-details"><%= task.title%></p>
+                <p class="task-details"><%= task.title %></p>
                 <p class="task-details"><%= task.content %></p>
                 <p class="task-details">
                   <%= new Date(task.date).toLocaleDateString("en-US", { year:

@@ -12,7 +12,7 @@ app.set("view engine", "ejs"); //to use ejs templet
 app.use(express.static("public")); //serving static files
 
 app.use(express.urlencoded({ extended: false })); //middleware to exratc incoming data form the files
-app.use(express.json()); // For parsing application/json
+app.use(express.json());
 
 app.use(taskRout);
 
